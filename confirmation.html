@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Barlow+Condensed:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "surface-variant": "#262626",
+              "surface-container": "#1a1919",
+              "on-surface": "#ffffff",
+              "on-primary-fixed-variant": "#5c6600",
+              "surface-container-low": "#131313",
+              "tertiary-fixed": "#ffffff",
+              "background": "#0e0e0e",
+              "outline": "#777575",
+              "on-tertiary-fixed": "#505050",
+              "primary-container": "#e1f800",
+              "primary-fixed": "#e1f800",
+              "tertiary-container": "#ecebea",
+              "surface-container-highest": "#262626",
+              "secondary": "#e2e2e2",
+              "on-surface-variant": "#adaaaa",
+              "primary-dim": "#d9ef00",
+              "on-secondary-fixed-variant": "#5a5c5c",
+              "on-primary-container": "#535c00",
+              "tertiary-fixed-dim": "#f2f0f0",
+              "inverse-on-surface": "#565554",
+              "secondary-fixed": "#e2e2e2",
+              "tertiary": "#fbf9f8",
+              "surface-container-high": "#201f1f",
+              "on-background": "#ffffff",
+              "on-secondary": "#505252",
+              "inverse-surface": "#fcf8f8",
+              "surface-dim": "#0e0e0e",
+              "on-tertiary-fixed-variant": "#6d6d6d",
+              "on-secondary-fixed": "#3e4040",
+              "on-error-container": "#ffd2c8",
+              "on-primary-fixed": "#414900",
+              "on-secondary-container": "#d0d0d0",
+              "error": "#ff7351",
+              "primary-fixed-dim": "#d4e900",
+              "outline-variant": "#494847",
+              "surface-bright": "#2c2c2c",
+              "tertiary-dim": "#ecebea",
+              "secondary-fixed-dim": "#d4d4d4",
+              "inverse-primary": "#5b6400",
+              "surface": "#0e0e0e",
+              "surface-tint": "#f8ffb8",
+              "surface-container-lowest": "#000000",
+              "secondary-container": "#454747",
+              "error-container": "#b92902",
+              "on-error": "#450900",
+              "on-primary": "#5b6400",
+              "primary": "#f8ffb8",
+              "secondary-dim": "#d4d4d4",
+              "on-tertiary": "#5f5f5f",
+              "error-dim": "#d53d18",
+              "on-tertiary-container": "#565757"
+            },
+            fontFamily: {
+              "headline": ["Space Grotesk"],
+              "body": ["Inter"],
+              "label": ["Inter"],
+              "bebas": ["Bebas Neue"],
+              "barlow": ["Barlow Condensed"]
+            },
+            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .text-neon-glow {
+            text-shadow: 0 0 10px rgba(232, 255, 0, 0.4);
+        }
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: #0e0e0e;
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: #2a2a2a;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container min-h-screen flex flex-col">
+<!-- Top Navigation Bar (Shared Component) -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 bg-[#0A0A0A] h-[60px]">
+<div class="flex items-center gap-8">
+<a class="text-[28px] font-black tracking-wider text-[#F5F5F5] uppercase font-['Bebas_Neue']" href="index.html">STRYDE</a>
+<div class="hidden md:flex gap-6 items-center h-full">
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="index.html">New Drops</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="products.html">All Shoes</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="ai-fit-assistant.html">Fit Guide</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="checkout.html">Cart</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="admin-dashboard.html">Admin</a>
+</div>
+</div>
+</nav>
+<!-- Main Content: Centered Success Layout -->
+<main class="flex-grow pt-[100px] pb-24 px-4 flex flex-col items-center max-w-4xl mx-auto w-full">
+<!-- Animated Style Checkmark -->
+<div class="mb-8 relative flex items-center justify-center">
+<div class="absolute w-32 h-32 bg-primary-container opacity-20 blur-2xl rounded-full"></div>
+<div class="w-24 h-24 rounded-full border-4 border-primary-container flex items-center justify-center relative z-10">
+<span class="material-symbols-outlined text-primary-container text-6xl" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+</div>
+</div>
+<!-- Headline -->
+<h1 class="text-[56px] font-bebas text-on-background tracking-tight leading-none mb-2 text-center uppercase">ORDER CONFIRMED!</h1>
+<p class="font-barlow text-xl text-primary-container font-bold tracking-widest mb-12">ORDER #STR-204891</p>
+<!-- Tracking Strip -->
+<div class="w-full mb-16 overflow-x-auto custom-scrollbar">
+<div class="min-w-[600px] flex justify-between relative px-4">
+<!-- Line Background -->
+<div class="absolute top-[18px] left-[50px] right-[50px] h-[2px] bg-surface-container-highest z-0"></div>
+<div class="absolute top-[18px] left-[50px] w-[25%] h-[2px] bg-primary-container z-0"></div>
+<!-- Steps -->
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center mb-2 shadow-[0_0_15px_rgba(232,255,0,0.5)]">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-background">Order Placed</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-2 border-2 border-primary-container">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-background">Packed</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-2">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Shipped</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-2">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Out for Delivery</span>
+</div>
+<div class="relative z-10 flex flex-col items-center">
+<div class="w-9 h-9 rounded-full bg-surface-container-highest text-on-surface-variant flex items-center justify-center mb-2">
+<span class="w-2 h-2 rounded-full bg-on-surface-variant"></span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-tighter text-on-surface-variant">Delivered</span>
+</div>
+</div>
+</div>
+<!-- Bento Layout for Order Info -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 w-full mb-12">
+<!-- Items Summary Card -->
+<div class="md:col-span-8 bg-surface-container p-8 rounded-lg">
+<div class="flex items-center justify-between mb-8">
+<h3 class="font-barlow font-bold text-xl uppercase tracking-widest text-on-background">Order Summary</h3>
+<span class="text-on-surface-variant font-label text-xs uppercase">3 Items</span>
+</div>
+<div class="space-y-6">
+<!-- Item 1 -->
+<div class="flex items-center space-x-6">
+<div class="w-20 h-24 bg-surface-container-highest rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="close-up profile of a sleek red running sneaker with neon accents on a dark architectural background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGGcy7AmQZSJhVfNW0g8GC-z127L3-pbIbX4hd-u4UgvhYVF8OHMBoIF1zf8g0cQb5NkvvvO3FOCZ-ODbMiqSOmn_GWicxOzxuzXCp0nIlgL2OvhfC3wO_23oX6-th4FuCnPqblT6BA12Rk1f_Ilak9uRAruFic68d-T-fcfpjl_t2b2FHxBarb1FbIz1SUVezOtxwu4D3iS80Pm4bMz2UOMx2dlg8W1PlPm_DSoA6RIlwcOpg5eeFBTyur5Zuo9Pb7M1Re_hWD-GR"/>
+</div>
+<div class="flex-grow">
+<p class="font-barlow font-bold text-lg uppercase leading-none">STRYDE V1 HYPERLIME</p>
+<p class="text-on-surface-variant text-xs mt-1">SIZE: UK 10 | COLOR: PHANTOM/LIME</p>
+</div>
+<p class="font-barlow font-bold text-lg">₹2,499</p>
+</div>
+<!-- Item 2 -->
+<div class="flex items-center space-x-6">
+<div class="w-20 h-24 bg-surface-container-highest rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="minimalist white designer sneaker on a dark pedestal with sharp directional lighting and shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZhLXFLGCdEnBgK9TpVIawGmDczTpCUl9PznUTtwSRn9_12QSbq265BOWdCan25WJjfVD3LDT4K1RdeNGJjL-g64KrXXV-sKt9NPfMDYSbgOQTxS3SZqH2HPS7QQ-GZWBw_YKgt8Qg2mBlM-udu3vuvIOou4rKwzFpqt-FfIZqWUhVtl4nm4oLj2oDxpejSLWGUnByw7OYV-y0JBSBbbCAaIqQVhfJCtWff35MEKGC0qWGW3k6U_SKZRejN_Rr566IXtGC2PqdkBal"/>
+</div>
+<div class="flex-grow">
+<p class="font-barlow font-bold text-lg uppercase leading-none">AEROCLOUD RACER</p>
+<p class="text-on-surface-variant text-xs mt-1">SIZE: UK 10 | COLOR: ARCTIC WHITE</p>
+</div>
+<p class="font-barlow font-bold text-lg">₹1,862</p>
+</div>
+<!-- Item 3 -->
+<div class="flex items-center space-x-6">
+<div class="w-20 h-24 bg-surface-container-highest rounded overflow-hidden flex-shrink-0">
+<img class="w-full h-full object-cover" data-alt="high fashion black urban boot with heavy tread and metallic details in a dark gritty studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrSIrQ3A7ma0ZKIltCKRickH7sDUfJbBIyc85Qn-I9omZGCNF0-ddWFK3OJA7eeYudyhT2KFMfKcQeQAKVctIZaKbR1n39woGT1rSrRdJ7RLYO1kMyLEBPU0SeNyZHg_tlQMlnnFPtYnsPKugHfk094yboSWSxLoCfQ5wHrQtp2YPQ0V44RWE-DcVU-UzFFR4_0LLht0jLlKpGY8X1IxgtB0VdRKQ1yBNvYa1-yQWJZFFZBhSDwMg5sb8CJw-cKtFgq6WNbgOzYCEr"/>
+</div>
+<div class="flex-grow">
+<p class="font-barlow font-bold text-lg uppercase leading-none">URBAN CORE SLIDES</p>
+<p class="text-on-surface-variant text-xs mt-1">SIZE: UK 10 | COLOR: NOIR</p>
+</div>
+<p class="font-barlow font-bold text-lg">₹1,500</p>
+</div>
+</div>
+<div class="mt-8 pt-8 border-t border-surface-container-highest flex justify-between items-baseline">
+<span class="font-barlow font-bold text-2xl uppercase">TOTAL</span>
+<span class="font-bebas text-4xl text-primary-container">₹5,861</span>
+</div>
+</div>
+<!-- Delivery Info Card -->
+<div class="md:col-span-4 space-y-6">
+<div class="bg-surface-container p-6 rounded-lg h-1/2 flex flex-col justify-center">
+<h4 class="font-barlow font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-3">Expected Delivery</h4>
+<p class="font-bebas text-3xl leading-none text-on-background">JAN 22 - 24</p>
+<p class="text-xs text-primary-container font-bold mt-2 uppercase tracking-tighter">EXPRESS VELOCITY SHIPPING</p>
+</div>
+<div class="bg-surface-container p-6 rounded-lg h-1/2">
+<h4 class="font-barlow font-bold text-sm uppercase tracking-widest text-on-surface-variant mb-3">Shipping Address</h4>
+<p class="font-barlow font-bold text-lg text-on-background uppercase leading-tight">
+                        Rahul Sharma<br/>
+                        Flat 402, Skyline Towers<br/>
+                        Adajan, Surat - 395009
+                    </p>
+<div class="mt-4 flex items-center text-on-surface-variant">
+<span class="material-symbols-outlined text-sm mr-2">phone</span>
+<span class="text-xs font-mono">+91 98XXX X4289</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Action CTAs -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+<button class="bg-primary-container text-on-primary-container font-barlow font-bold text-lg py-4 px-8 rounded-[4px] hover:scale-[1.02] transition-transform flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined text-xl">local_shipping</span>
+<span>TRACK YOUR ORDER</span>
+</button>
+<button class="border border-surface-bright text-on-background font-barlow font-bold text-lg py-4 px-8 rounded-[4px] hover:bg-surface-container-high transition-colors flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+<span>CONTINUE SHOPPING</span>
+</button>
+<button class="bg-[#111111] border border-[#2A2A2A] text-on-background font-barlow font-bold text-lg py-4 px-8 rounded-[4px] hover:bg-[#1A1A1A] transition-colors flex items-center justify-center space-x-2">
+<span class="material-symbols-outlined text-xl">camera</span>
+<span>SHARE ON INSTAGRAM</span>
+</button>
+</div>
+</main>
+<!-- Footer (Shared Component) -->
+<footer class="w-full py-16 px-8 grid grid-cols-2 md:grid-cols-4 gap-8 bg-[#0A0A0A] border-t border-[#2A2A2A]">
+<div>
+<div class="text-xl font-black text-[#F5F5F5] font-['Bebas_Neue'] mb-6">STRYDE</div>
+<p class="text-[#666666] text-xs font-['Inter'] leading-relaxed max-w-[200px]">
+                © 2024 STRYDE. ENGINEERED FOR VELOCITY. ALL RIGHTS RESERVED.
+            </p>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[#E8FF00] font-['Barlow_Condensed'] font-bold uppercase tracking-widest text-sm mb-2">Shop</h5>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Sneakers</a>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Running</a>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Boots</a>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Slides</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[#E8FF00] font-['Barlow_Condensed'] font-bold uppercase tracking-widest text-sm mb-2">Support</h5>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Shipping</a>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Returns</a>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Contact</a>
+</div>
+<div class="flex flex-col space-y-4">
+<h5 class="text-[#E8FF00] font-['Barlow_Condensed'] font-bold uppercase tracking-widest text-sm mb-2">Legal</h5>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Privacy</a>
+<a class="text-[#666666] text-xs hover:text-[#F5F5F5] transition-colors uppercase" href="#">Terms</a>
+<div class="flex space-x-4 pt-4">
+<span class="material-symbols-outlined text-[#666666] cursor-pointer hover:text-[#E8FF00]">share</span>
+<span class="material-symbols-outlined text-[#666666] cursor-pointer hover:text-[#E8FF00]">mail</span>
+</div>
+</div>
+</footer>
+</body></html>

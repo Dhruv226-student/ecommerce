@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Barlow+Condensed:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#262626",
+                        "surface-container": "#1a1919",
+                        "on-surface": "#ffffff",
+                        "on-primary-fixed-variant": "#5c6600",
+                        "surface-container-low": "#131313",
+                        "tertiary-fixed": "#ffffff",
+                        "background": "#0e0e0e",
+                        "outline": "#777575",
+                        "on-tertiary-fixed": "#505050",
+                        "primary-container": "#e1f800",
+                        "primary-fixed": "#e1f800",
+                        "tertiary-container": "#ecebea",
+                        "surface-container-highest": "#262626",
+                        "secondary": "#e2e2e2",
+                        "on-surface-variant": "#adaaaa",
+                        "primary-dim": "#d9ef00",
+                        "on-secondary-fixed-variant": "#5a5c5c",
+                        "on-primary-container": "#535c00",
+                        "tertiary-fixed-dim": "#f2f0f0",
+                        "inverse-on-surface": "#565554",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary": "#fbf9f8",
+                        "surface-container-high": "#201f1f",
+                        "on-background": "#ffffff",
+                        "on-secondary": "#505252",
+                        "inverse-surface": "#fcf8f8",
+                        "surface-dim": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#6d6d6d",
+                        "on-secondary-fixed": "#3e4040",
+                        "on-error-container": "#ffd2c8",
+                        "on-primary-fixed": "#414900",
+                        "on-secondary-container": "#d0d0d0",
+                        "error": "#ff7351",
+                        "primary-fixed-dim": "#d4e900",
+                        "outline-variant": "#494847",
+                        "surface-bright": "#2c2c2c",
+                        "tertiary-dim": "#ecebea",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "inverse-primary": "#5b6400",
+                        "surface": "#0e0e0e",
+                        "surface-tint": "#f8ffb8",
+                        "surface-container-lowest": "#000000",
+                        "secondary-container": "#454747",
+                        "error-container": "#b92902",
+                        "on-error": "#450900",
+                        "on-primary": "#5b6400",
+                        "primary": "#f8ffb8",
+                        "secondary-dim": "#d4d4d4",
+                        "on-tertiary": "#5f5f5f",
+                        "error-dim": "#d53d18",
+                        "on-tertiary-container": "#565757"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "bebas": ["Bebas Neue"],
+                        "barlow": ["Barlow Condensed"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .product-card:hover .quick-add {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 bg-[#0A0A0A] h-[60px]">
+<div class="flex items-center gap-8">
+<a class="text-[28px] font-black tracking-wider text-[#F5F5F5] uppercase font-['Bebas_Neue']" href="index.html">STRYDE</a>
+<div class="hidden md:flex gap-6 items-center h-full">
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="index.html">New Drops</a>
+<a class="text-[#E8FF00] font-bold border-b-2 border-[#E8FF00] pb-1 font-['Barlow_Condensed'] text-lg tracking-wider" href="products.html">All Shoes</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="ai-fit-assistant.html">Fit Guide</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="checkout.html">Cart</a>
+<a class="text-[#F5F5F5] font-medium hover:text-[#E8FF00] transition-colors duration-200 font-['Barlow_Condensed'] text-lg tracking-wider" href="admin-dashboard.html">Admin</a>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<button class="text-[#F5F5F5] hover:text-[#E8FF00] transition-colors"><span class="material-symbols-outlined">search</span></button>
+<button class="text-[#F5F5F5] hover:text-[#E8FF00] transition-colors"><span class="material-symbols-outlined">person</span></button>
+<div class="relative">
+<button class="text-[#F5F5F5] hover:text-[#E8FF00] transition-colors"><span class="material-symbols-outlined">shopping_cart</span></button>
+<span class="absolute -top-2 -right-2 bg-primary-container text-on-primary-container text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center">2</span>
+</div>
+</div>
+</nav>
+<main class="pt-[60px] min-h-screen">
+<!-- Hero Header -->
+<header class="w-full px-6 md:px-12 py-12 flex flex-col md:flex-row justify-between items-end gap-6">
+<div>
+<h1 class="text-7xl md:text-9xl font-bebas leading-none text-on-surface tracking-tighter">ALL SHOES</h1>
+<p class="text-muted font-barlow text-xl tracking-widest mt-2">48 PRODUCTS ENGINEERED FOR VELOCITY</p>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-high p-4 rounded-sm">
+<span class="text-on-surface-variant text-sm font-label uppercase">Sort By</span>
+<select class="bg-transparent border-none text-on-surface font-bold font-barlow focus:ring-0 cursor-pointer">
+<option>NEWEST ARRIVALS</option>
+<option>PRICE: HIGH TO LOW</option>
+<option>PRICE: LOW TO HIGH</option>
+<option>BESTSELLERS</option>
+</select>
+</div>
+</header>
+<div class="flex flex-col md:flex-row px-6 md:px-12 pb-24 gap-12">
+<!-- Filter Sidebar -->
+<aside class="w-full md:w-[260px] flex-shrink-0 space-y-10">
+<!-- Category -->
+<div>
+<h3 class="font-barlow font-bold text-xl tracking-wider mb-4 border-l-4 border-primary-container pl-3">CATEGORY</h3>
+<div class="space-y-2">
+<label class="flex items-center justify-between group cursor-pointer text-on-surface hover:text-primary-container transition-colors">
+<span class="font-medium">Sneakers</span>
+<span class="text-xs bg-surface-container-highest px-2 py-0.5 rounded">12</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer text-on-surface hover:text-primary-container transition-colors">
+<span class="font-medium text-primary-container">Running</span>
+<span class="text-xs bg-primary-container text-on-primary-container px-2 py-0.5 rounded">18</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer text-on-surface hover:text-primary-container transition-colors">
+<span class="font-medium">Training</span>
+<span class="text-xs bg-surface-container-highest px-2 py-0.5 rounded">8</span>
+</label>
+<label class="flex items-center justify-between group cursor-pointer text-on-surface hover:text-primary-container transition-colors">
+<span class="font-medium">Slides</span>
+<span class="text-xs bg-surface-container-highest px-2 py-0.5 rounded">10</span>
+</label>
+</div>
+</div>
+<!-- Price Range -->
+<div>
+<h3 class="font-barlow font-bold text-xl tracking-wider mb-4 border-l-4 border-primary-container pl-3">PRICE</h3>
+<div class="px-2">
+<input class="w-full h-1.5 bg-surface-container-highest rounded-lg appearance-none cursor-pointer accent-primary-container" max="4999" min="999" type="range"/>
+<div class="flex justify-between mt-4 font-barlow text-lg">
+<span>₹999</span>
+<span>₹4,999</span>
+</div>
+</div>
+</div>
+<!-- Size Grid -->
+<div>
+<h3 class="font-barlow font-bold text-xl tracking-wider mb-4 border-l-4 border-primary-container pl-3">UK SIZE</h3>
+<div class="grid grid-cols-4 gap-2">
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">5</button>
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">6</button>
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">7</button>
+<button class="h-10 bg-primary-container text-on-primary-container flex items-center justify-center font-bold">8</button>
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">9</button>
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">10</button>
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">11</button>
+<button class="h-10 border border-outline-variant hover:border-primary-container hover:text-primary-container transition-all flex items-center justify-center font-bold">12</button>
+</div>
+</div>
+<!-- Colors -->
+<div>
+<h3 class="font-barlow font-bold text-xl tracking-wider mb-4 border-l-4 border-primary-container pl-3">COLOR</h3>
+<div class="flex flex-wrap gap-3">
+<button class="w-8 h-8 rounded-full bg-black border-2 border-primary-container ring-2 ring-black"></button>
+<button class="w-8 h-8 rounded-full bg-white border border-outline-variant"></button>
+<button class="w-8 h-8 rounded-full bg-red-600"></button>
+<button class="w-8 h-8 rounded-full bg-blue-600"></button>
+<button class="w-8 h-8 rounded-full bg-[#E8FF00]"></button>
+<button class="w-8 h-8 rounded-full bg-gray-500"></button>
+</div>
+</div>
+<!-- Collection -->
+<div>
+<h3 class="font-barlow font-bold text-xl tracking-wider mb-4 border-l-4 border-primary-container pl-3">COLLECTION</h3>
+<div class="space-y-3">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 bg-surface-container rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">STREET TITAN</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input checked="" class="w-5 h-5 bg-surface-container rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">NEON VELOCITY</span>
+</label>
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="w-5 h-5 bg-surface-container rounded border-outline-variant text-primary-container focus:ring-primary-container" type="checkbox"/>
+<span class="text-on-surface-variant group-hover:text-on-surface transition-colors">URBAN MONOLITH</span>
+</label>
+</div>
+</div>
+</aside>
+<!-- Product Grid -->
+<section class="flex-grow">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8">
+<!-- Product Card 1 -->
+<div class="group product-card">
+<div class="relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<div class="absolute top-0 left-0 bg-primary-container text-on-primary-container font-bebas px-4 py-1 text-lg z-10 tracking-widest">NEW</div>
+<button class="absolute top-4 right-4 z-10 text-on-surface hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="high-performance red running sneaker in dynamic studio lighting with sharp shadows and technical textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsd8sM5T5U1mZ5aATqQNzSa2uS4jg8nu3hKLSGNG2OwLt9CbATswsg_qp3yQla2PBqUnyJvk5dL6rNJZvn5spGP9IA2Tb9E3kQ0pTb5ZiuBBkFE7zRhBKKzNxhzMXHhGqTBp3dkJE_UJ4ANfr1f1dSpDQu1CuiMDaYwwCdMN8ELUOZJFNGQnw0yont8Psnsbq7D8Tpvgqr2q5UCRnK5636R6vOPmwNtQ61_zXY60cccHCmiVKmP69mpX7uoPNAGjwQMx_N6-lQBmuO"/>
+<!-- Quick Add Hover Overlay -->
+<div class="quick-add absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center p-6 opacity-0 translate-y-4 transition-all duration-300">
+<span class="text-white font-bebas text-2xl mb-4 tracking-widest">QUICK ADD</span>
+<div class="grid grid-cols-4 gap-2 w-full mb-6">
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 7</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 8</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 9</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 10</button>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 font-bebas text-xl tracking-widest hover:scale-105 transition-transform">ADD TO CART</button>
+</div>
+</div>
+<div class="mt-6 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-barlow font-bold text-2xl tracking-tighter text-on-surface group-hover:text-primary-container transition-colors">STRYDE X-VELOCITY RED</h3>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.8</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-2xl font-bebas tracking-wider text-on-surface">₹2,499</span>
+<span class="text-on-surface-variant line-through text-sm font-label">₹4,999</span>
+<span class="text-primary-container text-sm font-bold">50% OFF</span>
+</div>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="group product-card">
+<div class="relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<div class="absolute top-0 left-0 bg-white text-black font-bebas px-4 py-1 text-lg z-10 tracking-widest">BESTSELLER</div>
+<button class="absolute top-4 right-4 z-10 text-on-surface hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">favorite</span>
+</button>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="minimalist white leather urban lifestyle sneaker on industrial concrete floor with dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVOp1yEyN6Z6IeaJD7ta0xp8_RsPizDn9FBBAIzdtlv2z3Oc8c_jHAr_R1vXdj0mDyQLpC_-8vN4Plc7G5bgZMe8KzGHkvJLPeNgpKskltDGfLH58KVF4MmBcVE2c7k2JqTa_eljLhj1VdfO1agr6XOMM34C7-n0irzB73odQKTqB1biX8yJ2rMvDre4LULT3Bq7L6WJtC52PNyv_4oZtmis6WVRB39YRNPgvezb1EGfGqOuWgbPqPFhmZ5oGMsRGH0xtAGyxVIWYd"/>
+<div class="quick-add absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center p-6 opacity-0 translate-y-4 transition-all duration-300">
+<span class="text-white font-bebas text-2xl mb-4 tracking-widest">QUICK ADD</span>
+<div class="grid grid-cols-4 gap-2 w-full mb-6">
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 7</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 8</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 9</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 10</button>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 font-bebas text-xl tracking-widest hover:scale-105 transition-transform">ADD TO CART</button>
+</div>
+</div>
+<div class="mt-6 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-barlow font-bold text-2xl tracking-tighter text-on-surface group-hover:text-primary-container transition-colors">TITAN MONO CHROME</h3>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.9</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-2xl font-bebas tracking-wider text-on-surface">₹3,299</span>
+<span class="text-on-surface-variant line-through text-sm font-label">₹5,499</span>
+<span class="text-primary-container text-sm font-bold">40% OFF</span>
+</div>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="group product-card">
+<div class="relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<div class="absolute top-0 left-0 bg-error-container text-white font-bebas px-4 py-1 text-lg z-10 tracking-widest">LIMITED</div>
+<button class="absolute top-4 right-4 z-10 text-on-surface hover:text-primary-container transition-colors">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+</button>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant blue and neon yellow technical training shoe with mesh panels and reflective accents on dark marble" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiZa9xCcqse-9bFjOpc-T3DQqF82UrrwsjO8-5HCvUzymsvBTR_9MW-abeFtbV5V3536OuO-Clta-g-9PFnnvg36DwAzx4NTA6R47KocWk6vQwSOAwnwHlme_NoIKS_bhx-V37OBavupShnimNmyNLaQt61UWGHB3sSu8qP16ZHVdal9A-MiV1WK0-945FRVseas-Zib2g4i6pktd4bwBuBibDaxUJZjJMbUMeaGRPukItY6uXX3tSudW5ocMmW4gTUPfC6Cb9ko94"/>
+<div class="quick-add absolute inset-0 bg-black/60 backdrop-blur-sm flex flex-col items-center justify-center p-6 opacity-0 translate-y-4 transition-all duration-300">
+<span class="text-white font-bebas text-2xl mb-4 tracking-widest">QUICK ADD</span>
+<div class="grid grid-cols-4 gap-2 w-full mb-6">
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 7</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 8</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 9</button>
+<button class="border border-white/30 text-white hover:bg-white hover:text-black text-xs py-2 font-bold transition-colors">UK 10</button>
+</div>
+<button class="w-full bg-primary-container text-on-primary-container py-3 font-bebas text-xl tracking-widest hover:scale-105 transition-transform">ADD TO CART</button>
+</div>
+</div>
+<div class="mt-6 space-y-2">
+<div class="flex justify-between items-start">
+<h3 class="font-barlow font-bold text-2xl tracking-tighter text-on-surface group-hover:text-primary-container transition-colors">KINETIC FLUX NEON</h3>
+<div class="flex items-center gap-1">
+<span class="material-symbols-outlined text-primary-container text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-bold text-sm">4.7</span>
+</div>
+</div>
+<div class="flex items-center gap-3">
+<span class="text-2xl font-bebas tracking-wider text-on-surface">₹4,499</span>
+<span class="text-on-surface-variant line-through text-sm font-label">₹8,999</span>
+<span class="text-primary-container text-sm font-bold">50% OFF</span>
+</div>
+</div>
+</div>
+<!-- Repeat Grid items for layout -->
+<div class="group product-card">
+<div class="relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<div class="absolute top-0 left-0 bg-primary-container text-on-primary-container font-bebas px-4 py-1 text-lg z-10 tracking-widest">SALE</div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="lime green athletic trainer shoe with chunky sole architecture and geometric side profiles in low key lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBifsXvFwvgfjAyz7heOvT-ERHQCxk0BpMiOAIAtK-lt8zkuhx7Zrvnl-e-qQYDuRU6q82qekMWdFTSNENyzLiQxmmNE8F1ZpkTKW9EH3oSz2MHHhdwEXRFYDe-pdBIlzsa3zf3LRqLHsNrzUwYkBVN5_zFvvomeW0bPhoitSEsfTMo0yPEmUtsYufPZryOHTekUFXY5oHsJ0ujl7rYe6S0LOSo-l0llG0W6r5VhU441m-yxrzPQqz6iFCctWLxB4RkZPSLFyDCPzFI"/>
+</div>
+<div class="mt-6 space-y-2">
+<h3 class="font-barlow font-bold text-2xl tracking-tighter text-on-surface group-hover:text-primary-container transition-colors">VOLT RUNNER GEN-2</h3>
+<div class="flex items-center gap-3">
+<span class="text-2xl font-bebas tracking-wider text-on-surface">₹2,199</span>
+<span class="text-on-surface-variant line-through text-sm font-label">₹3,999</span>
+</div>
+</div>
+</div>
+<div class="group product-card">
+<div class="relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="classic streetwear basketball sneaker with leather overlays and thick ankle support in neutral grey tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfVw1fkiUbLtMqh0iF-aG5uLc-ESC4Cq41txhJsi_Rp9x904flJXY2OsXw7OhPU6oXOPOPL57Bxs5avw9KmWtV6oSkLOpGuDrLfcil86kEZILVTXX8euszhNejQv1PpxZ7GcJ93V-E6gndAkbXXFqWQDWJqYnt_DDytKPKLhqBy3fdmzoAuiD_cZ5Cw258LwvoIABqP5sLw2x4hZrNlOqHCb415lIuofaCF5GnQlikmMbblPXdnZkks5KCnLk3NEQ0FhrtPx7loz4N"/>
+</div>
+<div class="mt-6 space-y-2">
+<h3 class="font-barlow font-bold text-2xl tracking-tighter text-on-surface group-hover:text-primary-container transition-colors">STREET ARCHIVE 85</h3>
+<div class="flex items-center gap-3">
+<span class="text-2xl font-bebas tracking-wider text-on-surface">₹3,899</span>
+</div>
+</div>
+</div>
+<div class="group product-card">
+<div class="relative aspect-square bg-surface-container overflow-hidden rounded-lg">
+<div class="absolute top-0 left-0 bg-primary-container text-on-primary-container font-bebas px-4 py-1 text-lg z-10 tracking-widest">NEW</div>
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="lifestyle sneaker with canvas upper and gum sole in high contrast editorial lighting with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMa7Qxy47ykLumKF2aQ3IDibviO-jVDbmEwXsPeNqhbT0dWgdvbuvKDduLyETARtp6slj6PD7d1m2EiFZ-W_rlBH6iA55IevU7CG7C8X4e-6eKK1UMPCodiD7stMPZVaYn6v0IsQ-NwiHh5KsaK9FB4H1GOC2pKLTg2Q5FyTM5q3wx_iBv20CGGHGIxcxkgx7zHQ6OvuiGttZnJmARElOmGPMULmqlLXQxMEhzDLdMs-30VMkAhjatcJV9Kloqz1esNjWa4Jt219v9"/>
+</div>
+<div class="mt-6 space-y-2">
+<h3 class="font-barlow font-bold text-2xl tracking-tighter text-on-surface group-hover:text-primary-container transition-colors">CANVAS CORE 01</h3>
+<div class="flex items-center gap-3">
+<span class="text-2xl font-bebas tracking-wider text-on-surface">₹1,999</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Load More Button -->
+<div class="mt-20 flex justify-center">
+<button class="group flex flex-col items-center gap-4">
+<span class="font-bebas text-2xl tracking-widest text-on-surface group-hover:text-primary-container transition-colors">LOAD MORE</span>
+<div class="w-16 h-1 bg-surface-container-highest relative overflow-hidden">
+<div class="absolute inset-0 bg-primary-container translate-x-[-100%] group-hover:translate-x-0 transition-transform duration-500"></div>
+</div>
+</button>
+</div>
+</section>
+</div>
+</main>
+<!-- Footer -->
+<footer class="w-full py-16 px-8 grid grid-cols-2 md:grid-cols-4 gap-8 bg-[#0A0A0A] border-t border-[#2A2A2A]">
+<div class="col-span-2 md:col-span-1">
+<span class="text-xl font-black text-[#F5F5F5] font-['Bebas_Neue'] tracking-widest">STRYDE</span>
+<p class="mt-4 text-[#666666] text-sm leading-relaxed max-w-[200px]">
+                PREMIUM ATHLETIC FOOTWEAR ENGINEERED FOR HIGH-VELOCITY URBAN LIFESTYLES.
+            </p>
+</div>
+<div>
+<h4 class="font-barlow font-bold text-[#F5F5F5] uppercase tracking-widest mb-6">SHOP</h4>
+<ul class="space-y-3">
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">SNEAKERS</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">RUNNING</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">BOOTS</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">SLIDES</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">COLLAB</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-barlow font-bold text-[#F5F5F5] uppercase tracking-widest mb-6">SUPPORT</h4>
+<ul class="space-y-3">
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">SHIPPING</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">RETURNS</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">CONTACT</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] transition-colors text-sm" href="#">PRIVACY</a></li>
+</ul>
+</div>
+<div class="col-span-2 md:col-span-1">
+<h4 class="font-barlow font-bold text-[#F5F5F5] uppercase tracking-widest mb-6">JOIN THE MOVEMENT</h4>
+<div class="flex">
+<input class="bg-surface-container-high border-none text-white focus:ring-1 focus:ring-primary-container w-full h-12 px-4 font-barlow" placeholder="ENTER EMAIL" type="email"/>
+<button class="bg-primary-container text-black px-6 h-12 font-bebas text-lg tracking-widest">SUBMIT</button>
+</div>
+<div class="mt-8 flex gap-6">
+<span class="material-symbols-outlined text-[#666666] hover:text-primary-container cursor-pointer transition-colors">social_leaderboard</span>
+<span class="material-symbols-outlined text-[#666666] hover:text-primary-container cursor-pointer transition-colors">photo_camera</span>
+<span class="material-symbols-outlined text-[#666666] hover:text-primary-container cursor-pointer transition-colors">brand_awareness</span>
+</div>
+</div>
+<div class="col-span-full pt-16 flex flex-col md:flex-row justify-between items-center gap-4 opacity-50">
+<p class="text-[10px] tracking-[0.3em] font-medium text-[#666666]">© 2024 STRYDE. ENGINEERED FOR VELOCITY.</p>
+<div class="flex gap-8 text-[10px] tracking-[0.2em] font-medium text-[#666666]">
+<span>TERMS OF SERVICE</span>
+<span>COOKIE POLICY</span>
+<span>ACCESSIBILITY</span>
+</div>
+</div>
+</footer>
+</body></html>

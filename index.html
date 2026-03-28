@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>STRYDE | ENGINEERED FOR VELOCITY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=Barlow+Condensed:wght@400;700&amp;family=Inter:wght@400;500;600;700&amp;family=Space+Grotesk:wght@400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-variant": "#262626",
+                        "surface-container": "#1a1919",
+                        "on-surface": "#ffffff",
+                        "on-primary-fixed-variant": "#5c6600",
+                        "surface-container-low": "#131313",
+                        "tertiary-fixed": "#ffffff",
+                        "background": "#0e0e0e",
+                        "outline": "#777575",
+                        "on-tertiary-fixed": "#505050",
+                        "primary-container": "#e1f800",
+                        "primary-fixed": "#e1f800",
+                        "tertiary-container": "#ecebea",
+                        "surface-container-highest": "#262626",
+                        "secondary": "#e2e2e2",
+                        "on-surface-variant": "#adaaaa",
+                        "primary-dim": "#d9ef00",
+                        "on-secondary-fixed-variant": "#5a5c5c",
+                        "on-primary-container": "#535c00",
+                        "tertiary-fixed-dim": "#f2f0f0",
+                        "inverse-on-surface": "#565554",
+                        "secondary-fixed": "#e2e2e2",
+                        "tertiary": "#fbf9f8",
+                        "surface-container-high": "#201f1f",
+                        "on-background": "#ffffff",
+                        "on-secondary": "#505252",
+                        "inverse-surface": "#fcf8f8",
+                        "surface-dim": "#0e0e0e",
+                        "on-tertiary-fixed-variant": "#6d6d6d",
+                        "on-secondary-fixed": "#3e4040",
+                        "on-error-container": "#ffd2c8",
+                        "on-primary-fixed": "#414900",
+                        "on-secondary-container": "#d0d0d0",
+                        "error": "#ff7351",
+                        "primary-fixed-dim": "#d4e900",
+                        "outline-variant": "#494847",
+                        "surface-bright": "#2c2c2c",
+                        "tertiary-dim": "#ecebea",
+                        "secondary-fixed-dim": "#d4d4d4",
+                        "inverse-primary": "#5b6400",
+                        "surface": "#0e0e0e",
+                        "surface-tint": "#f8ffb8",
+                        "surface-container-lowest": "#000000",
+                        "secondary-container": "#454747",
+                        "error-container": "#b92902",
+                        "on-error": "#450900",
+                        "on-primary": "#5b6400",
+                        "primary": "#f8ffb8",
+                        "secondary-dim": "#d4d4d4",
+                        "on-tertiary": "#5f5f5f",
+                        "error-dim": "#d53d18",
+                        "on-tertiary-container": "#565757"
+                    },
+                    fontFamily: {
+                        "headline": ["Space Grotesk"],
+                        "body": ["Inter"],
+                        "label": ["Inter"],
+                        "bebas": ["Bebas Neue"],
+                        "barlow": ["Barlow Condensed"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .marquee { white-space: nowrap; overflow: hidden; }
+        .marquee-content { display: inline-block; animation: marquee 20s linear infinite; }
+        @keyframes marquee { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-6 md:px-12 h-[60px] bg-[#0A0A0A] bg-opacity-90 backdrop-blur-md">
+<a class="text-[28px] font-black tracking-wider text-[#F5F5F5] uppercase font-['Bebas_Neue']" href="index.html">STRYDE</a>
+<div class="hidden md:flex gap-8 items-center">
+<a class="text-[#F5F5F5] font-medium font-barlow text-lg tracking-wider hover:text-[#E8FF00] transition-colors" href="index.html">New Drops</a>
+<a class="text-[#F5F5F5] font-medium font-barlow text-lg tracking-wider hover:text-[#E8FF00] transition-colors" href="products.html">All Shoes</a>
+<a class="text-[#F5F5F5] font-medium font-barlow text-lg tracking-wider hover:text-[#E8FF00] transition-colors" href="ai-fit-assistant.html">Fit Guide</a>
+<a class="text-[#F5F5F5] font-medium font-barlow text-lg tracking-wider hover:text-[#E8FF00] transition-colors" href="checkout.html">Cart</a>
+<a class="text-[#F5F5F5] font-medium font-barlow text-lg tracking-wider hover:text-[#E8FF00] transition-colors" href="admin-dashboard.html">Admin</a>
+</div>
+<div class="flex items-center gap-6">
+<button class="material-symbols-outlined text-[#F5F5F5] hover:text-[#E8FF00]">search</button>
+<button class="material-symbols-outlined text-[#F5F5F5] hover:text-[#E8FF00]">person</button>
+<button class="material-symbols-outlined text-[#F5F5F5] hover:text-[#E8FF00]">shopping_cart</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen pt-[60px] flex flex-col md:flex-row items-center overflow-hidden">
+<div class="w-full md:w-[55%] p-8 md:p-24 z-10">
+<span class="bg-primary-fixed text-on-primary-fixed px-3 py-1 font-bebas text-xl tracking-widest inline-block mb-6">NEW DROP</span>
+<h1 class="text-7xl md:text-[96px] font-bebas leading-[0.9] text-on-background mb-8">WALK DIFFERENT.<br/>LIVE LOUD.</h1>
+<p class="text-on-surface-variant text-lg max-w-md mb-10 leading-relaxed font-body">
+                Handcrafted in India, designed for the disruptors. Experience the kinetic energy of street luxury under your feet. Engineered for velocity, styled for impact.
+            </p>
+<div class="flex flex-wrap gap-4">
+<button class="bg-primary-fixed text-on-primary-fixed font-bebas text-2xl px-10 py-3 rounded-[4px] hover:scale-105 transition-transform">SHOP NOW</button>
+<button class="border border-primary-fixed text-primary-fixed font-bebas text-2xl px-10 py-3 rounded-[4px] hover:bg-primary-fixed hover:text-on-primary-fixed transition-all">WATCH THE DROP</button>
+</div>
+</div>
+<div class="w-full md:w-[45%] relative h-[500px] md:h-screen flex items-center justify-center">
+<div class="absolute inset-0 bg-gradient-to-r from-background to-transparent z-10 hidden md:block"></div>
+<img alt="Primary Product" class="object-contain w-4/5 h-4/5 z-0 transform -rotate-12 hover:rotate-0 transition-transform duration-700" data-alt="Close-up side view of a vibrant red performance sneaker against a dark minimalist studio background with sharp dramatic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCS3i_a5KuogohxquJlYdrvNwSKyrtfZrBv7xhIzuPX8N6Pmpnsc3gzZik_SwZU7UK1-G8eM3JSR4Udr7DwAfH57FshsmuvFytEH_qtIjHvly8ZuYioEeIDFpxoWCbyLPTNU0Mt2TASzncwwDTHwiF-Fa6R0DZuk6VKRNNXUw3xqpahNdwkF2qA6z3vJSuQS9EL49Uq01C8xry2Z0Pugcv9fO1NlcfjYsEDR5jRQzakXYKiYyY1GffgTWmknbgWy6khMgXzD90Zfle0"/>
+<!-- Floating Badges -->
+<div class="absolute top-1/4 right-10 z-20 bg-surface-container-highest p-4 rounded-lg shadow-2xl border-l-4 border-primary-fixed">
+<span class="block font-bebas text-primary-fixed text-lg">NEW DROP</span>
+<span class="block font-bebas text-3xl">₹2,499</span>
+</div>
+<div class="absolute bottom-1/4 left-10 z-20 bg-surface-container-highest p-4 rounded-lg shadow-2xl">
+<span class="block font-body text-on-surface-variant text-sm">847 sold</span>
+<div class="flex gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee Strip -->
+<div class="bg-[#0A0A0A] py-4 border-y border-surface-container-highest overflow-hidden">
+<div class="marquee font-bebas text-4xl text-primary-fixed tracking-widest flex items-center">
+<div class="marquee-content whitespace-nowrap">
+                WALK DIFFERENT ◼ LIVE LOUD ◼ ENGINEERED IN INDIA ◼ STRYDE X STREETS ◼ WALK DIFFERENT ◼ LIVE LOUD ◼ ENGINEERED IN INDIA ◼ STRYDE X STREETS ◼ WALK DIFFERENT ◼ LIVE LOUD ◼ ENGINEERED IN INDIA ◼ STRYDE X STREETS ◼ 
+            </div>
+<div class="marquee-content whitespace-nowrap">
+                WALK DIFFERENT ◼ LIVE LOUD ◼ ENGINEERED IN INDIA ◼ STRYDE X STREETS ◼ WALK DIFFERENT ◼ LIVE LOUD ◼ ENGINEERED IN INDIA ◼ STRYDE X STREETS ◼ WALK DIFFERENT ◼ LIVE LOUD ◼ ENGINEERED IN INDIA ◼ STRYDE X STREETS ◼ 
+            </div>
+</div>
+</div>
+<!-- Categories Strip -->
+<section class="py-20 px-6 md:px-12 bg-surface">
+<h2 class="font-bebas text-5xl mb-12">DEPARTMENTS</h2>
+<div class="grid grid-cols-2 md:grid-cols-5 gap-4">
+<div class="group relative aspect-[3/4] overflow-hidden rounded-[4px] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Athletic sneakers displayed on a minimalist grey pedestal with soft directional lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe5NqpA_x36-SWKR1YgEEGalJG3IiHhWdchZ-K1HwmhfuwWwbgsvHNAi5xbw-0hd5rAQNoTpOaVO5CWc6Da_oePJ3ok3n0wJpRAu9QtMLF1laj_3obOyGnojcUC9qHYnM8yTiaAvdq7l7MVNkDJl5IB3O5cJLCq9P3Qf8wghjKBBLgdu6BgKMf0MtxII1ZOLf_PIwq75kjN0Ml-huHPBOBloPwdm0AiLvw3Sh4pHt3qdjkSUPu-gELelwijCgbPW4wf6FKj1deWRJ0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute bottom-6 left-6 font-bebas text-3xl">SNEAKERS</span>
+</div>
+<div class="group relative aspect-[3/4] overflow-hidden rounded-[4px] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Performance running shoes hitting an asphalt road with motion blur and sunset lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBpu8s6Cg66cHnG5lRiDsrb8yDPJ-wDY0eztm1h_MQermGx46AvVq7P-SXDZtVyJBmCtDyLIsFu75-fThasBqdIWPFcvqJI9eLR4Fg573dAIOpW6KsfuOZceQbSPL_6ZeIw7tCv2arCPehD4u7j3PoKE2JXvyRZBiaI2OTutaokG0NLza0xmOhJg2-QL8E5Y1bWwCXtrHMgcLodf5tVlvJ8o7aJl71EnPgx377gvb8KpOnz2tnSzjtgEXtVqcoIcrVkZRLgTu-fF3m"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute bottom-6 left-6 font-bebas text-3xl">RUNNING</span>
+</div>
+<div class="group relative aspect-[3/4] overflow-hidden rounded-[4px] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Heavy duty leather combat boots on a gritty industrial floor with cool blue tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBLocsP3GHFVYxfKbyToxC9Gun_xeC1FpY-423HDxEGtqobj1lNdENitVBT_KqWoSabYiRtm8VCO350zg1wWn05XzxIrvVfeoSSos72LoVx95veadBiGVl4e9YIyE_Ja3rlHpKqPsfTjYRP5E4dmA0iCvI5ObtES-ERkmEoTgvLIGdwpv-lbFG4zykzEQjLogIZlg9c50b58KFfrrEMTl-LZLhTjsRP412S1cqDG5JIidK3WcBBeRkzFJmB2oNhlDapVVu8rfB7F9qP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute bottom-6 left-6 font-bebas text-3xl">BOOTS</span>
+</div>
+<div class="group relative aspect-[3/4] overflow-hidden rounded-[4px] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Modern minimalist slides on a clean wooden surface with soft natural light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYChGCvdgCKDl0YNy9s-nfcy0Gv7t29CYioGfHtju8sbZxGzRQtxjZLCuzO9AbMDh_iV6-p1-iO0b0ZgQIrrFK-QBztQse5VOjOoBYqIaIk2FL_RaSXktscKWTNBkR6AI9OKfKBDniNd6pPkCpXvs6bQKwJQGw_rm8DxC8AiJVHPyB9vsEzloNKYLOUdVFPcRf11brM2KTIYhP52VgD95ojftvRENkTj2Mko0x2l3bYaPM6pZx9IN4lGgCgH9Bc8UE5xXPMyB70Q7T"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute bottom-6 left-6 font-bebas text-3xl">SLIDES</span>
+</div>
+<div class="group relative aspect-[3/4] overflow-hidden rounded-[4px] cursor-pointer">
+<img class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" data-alt="Exclusive limited edition designer sneaker with complex patterns and neon accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJBc1mVbjUVlfM0eTivCFP0Bywj8P8rG4Gnk6hgek-0jq-4sb-I6QBXhlrbQUmPd9FnJkhKrAJwOFHxYxNEOXU2Z_5Yr7KhXxMAllShfge6f-BiPkZjF5s7noAh-8rNV1R9CSmY9xmfQ_Ui5-1pGLKP_jRuzpga-PdZeA50IcxQ2-MZ04r8Y67gL1_UTIj5q0z3G8z-YqGRfB_7O7KOEDVtNSn7vKhWWlYRdtac4zK6X14PPS5pQHNyjjbLKkTQQkmdw6fRRVk9EVP"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent"></div>
+<span class="absolute bottom-6 left-6 font-bebas text-3xl">COLLAB</span>
+</div>
+</div>
+</section>
+<!-- Trending Now -->
+<section class="py-20 px-6 md:px-12 bg-surface-container-low">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-bebas text-5xl">TRENDING NOW</h2>
+<a class="text-primary-fixed font-bebas text-xl border-b border-primary-fixed" href="#">VIEW ALL</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card Loop x 8 -->
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Dynamic shot of a red athletic sneaker on a dark grey surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD8oEDa3pvY0PrdQkxKZ74OzOogZrcWjg2XPk01KU60405XEzMP-NLKB2ON7pYO-QsX2OGyJg15fJLi_Yth1kFZP0qF2GvRkh5iJ95AkvFcXZN8q6Hq-bM4QNxKl_ry8TGvFvMYtXXwRGzcl1pE-gTNiUd8h8hI7zFqWS8yfcVuzrBXL_5tRTCt8BdLbUNX__yMFHTB1jqL7nZs4TzGP9rxDPhG5rtn1Th1A403aiaYDGfnjogZWtI09dbSceox0y_uVntA3dw9C0Ro"/>
+<span class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed px-3 py-1 font-bebas">NEW</span>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">KINETIC RED V1</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.9 (124 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹2,999</span>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Crisp white running shoes in a minimal white space with sharp shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB2mXww045zNiLuUTBV_FyYd7-r2Z0gKLpkNkrl8Xg4n_rsQgODyWRv-ZYYA8BQ0UjQABWjJLj2dO5w_hVVvF9s7lp9jpvk7dgt5G4jRA3yYrBOjyIEvZPSQcGm9OSewwFpIWmx2HaA__oTuHJCUHNVX3rbAsaLCACDXlXaeChfquP1X_5gd3myqH-DaZiuUVHwf0crsqDIDHaqjBhEv7DbEBBlkqVqaDrVGWHScuqARL6o2XMnlJkwZUH5Wq7ttBR62Ekd6pJwsu-2"/>
+<span class="absolute top-0 left-0 bg-error text-white px-3 py-1 font-bebas">SALE</span>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">VELOCITY WHITE</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.8 (89 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹1,799 <span class="text-on-surface-variant line-through text-lg">₹2,499</span></span>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Dark combat boots styled with urban streetwear against a brick wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBU7Vb0foM-lN_0Q6WyeRbzDRHzK8GVggRala8Rhyix9cFZTkkZFFIFfwKYPhbKDAjt_86SgRirT6IEu_iXZKF_b1TWd7NpTs2yWVnJ3sMdnSh4HyqjEXzr93IOfRB8dK-yof8mtc5FLORNlKldYosmGVnMGtB3teXspcV3nhGS08f0GcRxrEN-l6GRvqQvVXNpMS7xyKz1-takysernnsFcOxEISzOomD8_pYsQ_05uQUSlBZMxE8HdMz_r63u7AnNfayKq6hEVNej"/>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">URBAN ARMOR BOOT</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">5.0 (56 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹4,299</span>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Sleek black and lime green lifestyle sneakers with futuristic sole design" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu07VhMtLyexhCxI65GjfJQZFl3iRWLXtNeFEgcB1SVX2ISWD5i9Z84jCH7PQpaXOvB_k7Hi9xajuaJPN6WSiWZnz3f6LzxExsYinrXVe11j5MBZrVDshw5DGI7iZVxFvhPpbkzYKRePEH9Qv2hl89QGcJABAjVCd2jV_fHY9DYuZDAdj0E62LN-oHbrLZSeF7Ifvy1EGy2Ql06oVyIIegoFgF1jBeoXS-cEOkMabznO62vswYfKgtFecrRCKWUMvXmITvt-WXn4hz"/>
+<span class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed px-3 py-1 font-bebas">NEW</span>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">NEON STRIDE COLLAB</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.9 (210 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹3,499</span>
+</div>
+</div>
+<!-- Row 2 -->
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Chunky white street sneakers with pastel accents and thick platform soles" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAc0iozs40Ny5-j5hvNfBJgMG4S6TkGmyMMS9yyFbU9SI-VecHCeA8SlFkv2DIwIfj7sFIF87urFUo_HvpxOSWTlaL8e11HSLjaNBbsDmLXzM2ZajaDPFnJ1shHtEbajC7-udraqmiiynfkaQ1yjevjWi8zluVSXjr0vmNFq9SfRdTnsimJ-IfiqFEYnOA9eK8ThG-ZzeX7G-GT95zQNoSpX1wm-j0hRtQOfpbqXj4OXwTbZerLAyzQjp9Tgbs2DTCRaPRi-AvBLkks"/>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">STREET CHUNK V2</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.7 (76 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹2,799</span>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Premium black leather slides with subtle embossed branding" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMW8ywOeb4dNRTyQ0GcL0CoXcOj3qMQ-fDP3ZCAiWqMDSmIFay7xvLqAIPoCc5Mx2oSEJIaCIMEpa7di16C1YtEwgyLC_CfH7KXtwbSlkd7Fb3_j9qkTj15d8FAacpZCT9l4VrBnewrujD8acusRegBWcwrJg87Sn5HUXz8N1pMLbsH66nzWjHw1i-56KWlMr4IQZDS6K4MkaqGqXJoZViuagnmFpv4uumCqxSOYWfyF7uUfCG_OxYLnF-n3fW9eOLVfXsP-boZNaa"/>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">LUXE SLIDE</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.6 (45 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹1,299</span>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="All black technical training shoes on a dark grey textured floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDJGjxrBjV3tYcCdqdrzdKmnu1VMMtqzGhNHXtK2P9hA__-Qme-MmvgdAajQwJBYOzoX6yM95Y1-30vKWRwEUFPCHCbKIj8wvA5o6667btQxFcarqD2Ud1cI-_GKFiuly5xnSJcdHe5AFIIRbANLKIpiy-zuL-RfLjW6ygWCchU9tCZUAnBiXqyvOzKB-CSV5fOhCIZEhbCsC0ONeQr851lGveVNgLv86WRjzO87oThO91ZCLw-cnerkX8GyxADF5KwoE6DcLFLM4F"/>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">STEALTH OPS RUNNER</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.9 (134 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹3,199</span>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-surface-container aspect-square overflow-hidden mb-6 rounded-[4px]">
+<img class="w-full h-full object-contain group-hover:scale-110 transition-transform duration-500" data-alt="Vintage style lifestyle sneakers in shades of tan and cream" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAqQTNksYI37VEHqGNSwoE7aEfaPAQYBoCqu8-sS1FO50VHYOsFnqJpAFSV-wLiUa9DSzSOxMHRuLK3HSCSlqQ48UfjtHzqIjzJD6OiWne8ziByQw43BjV5N_-fKHKV_4k_TafabMFTQs6POjy8-xMwDeEkk-9NekWw9EjZiK247o7JVfz--oPQK2D6zp-iD0FtvWCLR5B2CNvh01QEVsfKPvY_NntqiJMi5d53pz-Gf2yi8I6yeEUiJZOjB_cwjstlSehFBe7HRkG3"/>
+<span class="absolute top-0 left-0 bg-primary-fixed text-on-primary-fixed px-3 py-1 font-bebas">NEW</span>
+<button class="absolute bottom-4 right-4 bg-on-surface text-background p-3 rounded-full opacity-0 group-hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined">shopping_bag</span>
+</button>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-barlow text-2xl font-bold uppercase tracking-tight">HERITAGE GUM SOLE</h3>
+<div class="flex items-center gap-1 mt-1">
+<span class="material-symbols-outlined text-primary-fixed text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs text-on-surface-variant">4.8 (92 reviews)</span>
+</div>
+</div>
+<span class="font-bebas text-2xl">₹2,899</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Limited Drop Banner -->
+<section class="bg-primary-fixed py-20 px-6 md:px-12 flex flex-col md:flex-row items-center justify-between">
+<div class="w-full md:w-1/2 mb-12 md:mb-0">
+<h2 class="font-bebas text-6xl md:text-8xl text-on-primary-fixed leading-none mb-8">STRYDE X AHMEDABAD STREETS</h2>
+<div class="flex gap-4 mb-8">
+<div class="bg-on-primary-fixed text-primary-fixed p-4 min-w-[80px] text-center">
+<span class="block font-bebas text-4xl">02</span>
+<span class="text-xs font-bold">DAYS</span>
+</div>
+<div class="bg-on-primary-fixed text-primary-fixed p-4 min-w-[80px] text-center">
+<span class="block font-bebas text-4xl">14</span>
+<span class="text-xs font-bold">HRS</span>
+</div>
+<div class="bg-on-primary-fixed text-primary-fixed p-4 min-w-[80px] text-center">
+<span class="block font-bebas text-4xl">52</span>
+<span class="text-xs font-bold">MINS</span>
+</div>
+</div>
+<button class="bg-on-primary-fixed text-primary-fixed font-bebas text-2xl px-12 py-4 rounded-[4px] hover:scale-105 transition-transform">GET NOTIFIED</button>
+</div>
+<div class="w-full md:w-1/2 flex justify-center">
+<div class="relative">
+<div class="absolute inset-0 bg-on-primary-fixed/10 blur-3xl rounded-full"></div>
+<img class="relative z-10 w-full max-w-lg transform rotate-6 drop-shadow-2xl" data-alt="Close-up artistic shot of a designer collaboration sneaker with vibrant textures" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDTynkO8yZawFvwjocqMFkkfDll0P27mP-qW6euC46nuwK-NKvNJFwO71un-_3Vx8m7dOMFQ8JWOvFMum-MDOsS3i161VgowKOZkAUVHCv0m2znzJGpAv0Od_IxW8y_zwas70wASbUMjwtCb9yev1F8Vv1OUWlHh8wu-b_rjIS-1Xd1r0dVBod2an0xqc3JUdXv9xzefAUUh1mAR4v8OfQif8hWCnKxdU8I6JkgGyt0PQGo6NVbDbMVN7VUqOg9s7pAHRjQ-A2Cfgho"/>
+</div>
+</div>
+</section>
+<!-- Social Proof & Reviews -->
+<section class="py-24 px-6 md:px-12 bg-surface">
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+<div>
+<div class="flex items-center gap-4 mb-6">
+<span class="font-bebas text-6xl">4.9</span>
+<div>
+<div class="flex text-primary-fixed">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<span class="text-on-surface-variant font-bold uppercase tracking-widest text-sm">OUT OF 5 STARS</span>
+</div>
+</div>
+<h2 class="font-bebas text-5xl mb-8">VOICES OF THE STREET</h2>
+<div class="bg-surface-container p-10 border-l-8 border-primary-fixed italic text-2xl leading-relaxed mb-8">
+                    "STRYDE isn't just a shoe; it's armor. I've worn premium international brands, but the construction and raw energy of these are unmatched. Finally, India has a street icon."
+                </div>
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 bg-primary-fixed rounded-full flex items-center justify-center font-bold text-on-primary-fixed">VK</div>
+<div>
+<span class="block font-bold">Vikram K.</span>
+<span class="text-on-surface-variant text-sm">VERIFIED BUYER</span>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-2 sm:grid-cols-3 gap-2">
+<!-- UGC Grid -->
+<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="User submitted photo of sneakers in a gritty urban alleyway" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz329ug-u5FHl72yDfOkI4nNC8NSqfA183fxhQUtuq55ubd7f68__0E3udfpNGgtRIV3XwNGB4wqQHOhBR4P-PBr9VAwmvf7SYak8cMx37XugxtKwiNu6i1OKvWPePFeQ-ADRgJMEHaoVyKIBBkJi9uEZkafJa3MEuyFd-ub-GOv0VluwyiECi7wlLwnncg8_n20rBOU_5Z6gGAt0Rp_QGbZTXz39oOuduxFV85S6xP3y2wutfzEJHZbzwIrypdaBd4WWzH7ugfVw0"/>
+<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Candid street style photo of someone walking in STRYDE sneakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAkT072xegGclfJ45NJdLhULWpe5cFV7VCHje4a-4-4WZV3j1kt-Fw_nHoDkFci1eXkDV_FyZEOfnoMTnPVbXDGG5Fb_VpOercard--zOb0LUYKkmwaMNsu3tn_lckBDr-wr2NbXe_lvH6l6q4PCLZ452tr6_p6kl0YorYUashx_WvqToPjDaVct5HMOUwz_UuihW4OBKXj79PWrAFXMXcdljFfEJR2UZ_zOVb_5ZzRXHSTBDz5rF-OKtCR6OdNAZ3YK9RPPPY6Gl0h"/>
+<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Lifestyle photo of sneakers on a basketball court" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBywrFNI72VsbptUmP9aSXK8DkcGx3_kPlGP8QZ7FICj5HPxB7NYxgGOa28QC2Qn4z02tI7boYD6OpkDbtLZ6JMUOazcqpUyv0jvBHpCamTuuC9WWLPSZ7nZczDHtAbhWBPaKJqzR13nI4BVLyaTrFwXi4ttNMpCLGt0oZb3kIt7IMEUahmkrtN797ndBMSCHzRfHo4xowp7eA8YN-Ya6Gj9mn_GZOXKa7Mjt4BeGqWLuQCpVbd3spx-q2oqL3vOoRMk_VOa8TyDFyF"/>
+<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Night photography of sneakers illuminated by neon signs" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCopwCmBzY-JiYTD6oCVtD153ELl6O6tUnF2CnqzHmYCDX4KuL6A7o4ilt7dLvS3gDDThVRbTRZyGWHPisFe30gxubQSqAiRyh3Kmoky34EowWmCmLemVheBvW4VxHMiJrrhNGuo0ZCxX9FRkqiX31HwjPUYFuYjZ5SNpmwZwd13QZ0dS_jwtivKFuShLxWIdMJhSN6dozRvz5dlMU9iitHPRjdNFqlieP-xVzu7ISAxcfTuelK0sF0kXhIC_ujxnXC_x6TVuS9r30C"/>
+<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Top down view of sneakers on a subway train floor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeCQ-FD53FBuQ2-iuV8_V89Jeb0n1JSwCagHLRhW6nZ5EJ1ulRdWlVM3wO1qJ-GkKKpLWp9JCLjKcW-lsleqmVgvy0jRj12umxoks2bdNEvgoul3ZRt5Sc8YOx3O_FDOnSLhFAur54AaAFYu-IYlECpMxnB07c0kVPsEsghV8l80rGu72LJ40-GUkuM0qyw8Mk60ykGs2dse7m18MbzSNURKOcaDYGzun6cN2_82gKvhm0-g7nRMN6AHtrKg71_LWKsLcm5AgLVh_S"/>
+<img class="aspect-square object-cover grayscale hover:grayscale-0 transition-all duration-500" data-alt="Artistic shot of sneakers against a graffiti wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD661W-Os1CmiwpZvg6OYqUyn1y9DxbyF2d3W9oBXcjBNgAgOD5u7DonnIUFv5FYnA3c1M5QqvXiUinfCewhJK6ugO-1AourrIXt7L5axo1ZVtsLz4UJkr9_ddOOse0ITERIHGeAxYvgQ6FYAAvcnU7LdYWhQCQcLsFjD4qQMHrZMIMQIQcTOR-OqG_D97ooaEh9DISuhycH9isWllPFSo5VPW9g-xYBWP6NsSnDdqvhsa-lzbFtmOh3uDeFvE6u60CWsvm8wfcS9kn"/>
+</div>
+</div>
+</section>
+<!-- Brand Story -->
+<section class="flex flex-col md:flex-row min-h-[600px]">
+<div class="w-full md:w-1/2 relative overflow-hidden">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="Cinematic shot of a craftsman's hands working on a leather shoe last in a traditional workshop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_oiFR9u11k2ZTMpGMM4_lPoeZ2nho8BPWXsPU3dGpir3tZybLEut4s2lvr4H5mvXl_CR-2E4ztILwzNWELQ_x0Bt0gTudp1V1UlJA57bjW6oLVHcLLgFhvi1pAVkMltLYperWyO8Af1KRYGK7OeTNTIzTEiAoTBWQHTutmYxUXigu7cQ-fckwb0Zz_21eP-XeawNrUVuLny2w-dZvUQZcOZBB_hXWi17qjNFM-U5NRoEbbKIEYJdi_0WlcLuIU9hv_bAvlpePr58-"/>
+<div class="absolute inset-0 bg-primary-fixed/20"></div>
+</div>
+<div class="w-full md:w-1/2 bg-surface-container-high p-12 md:p-24 flex flex-col justify-center">
+<h2 class="font-bebas text-6xl md:text-8xl leading-none mb-8">BUILT IN INDIA.<br/>WORN WORLDWIDE.</h2>
+<p class="text-on-surface-variant text-xl leading-relaxed mb-10 max-w-lg">
+                We believe in the raw energy of Indian streets. Our mission is to take that kinetic spirit and engineer it into high-performance footwear that challenges global standards. Every pair is a statement of local craftsmanship and global ambition.
+            </p>
+<button class="border-2 border-primary-fixed text-primary-fixed font-bebas text-2xl px-12 py-4 self-start rounded-[4px] hover:bg-primary-fixed hover:text-on-primary-fixed transition-colors">THE STRYDE MANIFESTO</button>
+</div>
+</section>
+<!-- Instagram Feed -->
+<section class="py-20 bg-background">
+<div class="text-center mb-16">
+<h2 class="font-bebas text-4xl mb-2">TAG US TO BE FEATURED</h2>
+<a class="font-bebas text-6xl text-primary-fixed hover:underline" href="#">@STRYDE.IN</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-6 gap-2 px-2">
+<img class="aspect-square object-cover hover:opacity-80 cursor-pointer" data-alt="Street fashion portrait of a model wearing techwear and STRYDE sneakers" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCeqX-2DWpdvGEA_f8Ox9wjsvMKDd1lsTYv6kFBts5UleyUgK1-esGExRwKXzlUq4fYf88aUnB23OtSra5GZpbZRBZrRVfmwmcBkhv-sx_JDAM7B98MXujXB60ycJ3feSNwTQiJNxarxcVw5a3XS0F6TiRQDfpxVOh15aaPf7rFfTZMyRg1nspBGmZzghf9vQgDqTeXmy7nkzH4W38KUSAe0bQrIXthxGSFNi39mD0pT5xE-k78CHDnWsDZbX_PlSjxoOGavgDtNHFs"/>
+<img class="aspect-square object-cover hover:opacity-80 cursor-pointer" data-alt="Close up of sneakers on a bicycle pedal against an urban sunset" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaapkx8nk2Axy-GyEMzMFwapWtf0lqSA_7rPvK0ZRGW53ZYEfQ656Be1XBKx6DlAI8vhn5c8hmplHFTubiRv-iNt7EXUD4j-_4okXbwNvPCLuexvyqrtf9QoSh1h8OtjTF_ZGRNMz9gezvzTD4_H-iHcXBK6atAhNjnqmH37ddflGQNM4hOEKRsn8Slmiu375VNm1Fty1Mmk_PWoq9OFmRWmx72hLplBFGnZo47Oa59uUdX3u1nx3Mlma2G1ZPF7czKTIosOAVQgOU"/>
+<img class="aspect-square object-cover hover:opacity-80 cursor-pointer" data-alt="Aesthetic product shot of sneakers with sunglasses and a watch" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCGyKgzseGmgF4T4KptaTiJ4Ms73no-dfZJcpBLfe0GsfUdzr1PGHbfaNFoRNNyS9dGo4hjNvb7QcfUv92kyd6kG2LzrQCb7K0uDaV8IvytrUy04MHdukVvcvUyLm8VvWDcODH-v4N_fzr2t4EVw5m4g73oHLKs2ZHvUMC7OXhWHTT09WHjm6n8wJAv97ZiIVl21fyad-pGz435l4BYXQvgg3vUGAJDx2sVdIXf20Mwy8mRxL8EQyi1sUVjgzXBCxGotouUJnOLACN"/>
+<img class="aspect-square object-cover hover:opacity-80 cursor-pointer" data-alt="Group of friends showing off their sneakers in a park" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDW4GzO7YT7Qi2-eMFB0u_IrIbwbHxnBEhzR3PBmmAm226xIxBw-Rcoz_AzKmXmu9VZU_7eeY9N6mq8J_wGmUf9UTDtjsIKzpTk9AmC6NIpoHYLncehk1jzVq4nwGGqTRKTiv53BUi25PwVQJ3YNi51h8mzy6-RFjgFhIPgQpe9rD-TvWnikNZSRqgT8mh4r5IlhNUioQxtF94iSgCNPShjgfQr4SXaIGzL0pcIB634DmeomtyTcNgVORfpyPPr2Jnl1ErhD8RrBUIZ"/>
+<img class="aspect-square object-cover hover:opacity-80 cursor-pointer" data-alt="Candid shot of sneakers in motion while jumping" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOAJ6gCPi97rG4UtTD-vu3Yc6tLvHb5-lWk_sy4gt1V7Uz6Pe5tZ1Y_e2xOyjCUhYgLu-tTG9pqKvNJo_Aj09j9QlgZcN4byzdAmBHenyJGiwlXHLgKuRGR1eutzuN2DFlgWjQInuJZBCgQDwgczfeYO2A5u4FmG3TV8I8sMPTEJ5cyTy7PLJa8JGGqO_wt0nZYixKp1sz8iVHIZwHwiLhOQ1i-1VGZF6wN-ZOx9ZiavycyhyNBDvRp1gt8NRNrANzy3jSNmXiSBU5"/>
+<img class="aspect-square object-cover hover:opacity-80 cursor-pointer" data-alt="Minimalist fashion layout with sneakers and a camera" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjoZuyS-giYwxJloSBldskPNzr_adii82Et3gng2_PE5lIX13Lq4FEUtPeoGA9rnqQubAGCxGx3q8fvi5DxImwTz3v3ULt_EqCQIH945ZMLaVCSyZnqfHqre7DvvpqbYfBX2b0EvQEw99y0f2enmbsGbl-9vBDIliSCbTIQTNeBkA2O5steGjIdbecsAc1v9ba_BSbFKNeNvdJg-9cJu7wDLWLNUW4cxoIfbgmvTACHAhGz3KngyioQebDT9b7X0bY3HPxxxuUxCWU"/>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#0A0A0A] border-t border-[#2A2A2A] w-full py-16 px-8 grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<div class="text-2xl font-black text-[#F5F5F5] font-['Bebas_Neue'] mb-6">STRYDE</div>
+<p class="text-[#666666] text-sm leading-relaxed max-w-xs">
+                Premium street luxury engineered for velocity. Designed and handcrafted in the heart of India.
+            </p>
+</div>
+<div>
+<h4 class="font-barlow font-bold text-[#F5F5F5] mb-6 tracking-widest uppercase">SHOP</h4>
+<ul class="space-y-3">
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">SNEAKERS</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">RUNNING</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">BOOTS</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">SLIDES</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">COLLAB</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-barlow font-bold text-[#F5F5F5] mb-6 tracking-widest uppercase">SUPPORT</h4>
+<ul class="space-y-3">
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">SHIPPING</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">RETURNS</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">CONTACT</a></li>
+<li><a class="text-[#666666] hover:text-[#F5F5F5] text-sm transition-colors" href="#">PRIVACY</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-barlow font-bold text-[#F5F5F5] mb-6 tracking-widest uppercase">NEWSLETTER</h4>
+<div class="flex">
+<input class="bg-surface-container-high border-none text-[#F5F5F5] text-sm w-full focus:ring-1 focus:ring-primary-fixed" placeholder="YOUR EMAIL" type="email"/>
+<button class="bg-primary-fixed text-on-primary-fixed px-4 font-bebas">JOIN</button>
+</div>
+<p class="mt-8 text-xs text-[#666666] uppercase tracking-tighter">
+                © 2024 STRYDE. ENGINEERED FOR VELOCITY.
+            </p>
+</div>
+</footer>
+</body></html>
